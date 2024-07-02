@@ -128,7 +128,7 @@ int main() {
         FD_SET(server_fd, &read_fds);
         max_sd = server_fd;
 
-        timeout.tv_sec = 1;  // Timeout after 5 seconds
+        timeout.tv_sec = 5;  // Timeout after 5 seconds
         timeout.tv_usec = 0;
 
         activity = select(max_sd + 1, &read_fds, NULL, NULL, &timeout);
